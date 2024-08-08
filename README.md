@@ -45,6 +45,7 @@ This gives the code greater scalability and organizaiton. For example, if one wa
 - Assumed that "buffering" happens radially at corners. This is handeled by Shapely.
 - Assumed that user-provided data (both zones and vehicles) is valid.
 - Assumed that intricate type and exception handeling was unncessary. In a real setting, passing a ```Vehicle``` into a function asking for ```List[Vehicle]``` should be handeled with greater care.
+- Black was the autoformatter of choice.
 
 
 ## Setup and Installation

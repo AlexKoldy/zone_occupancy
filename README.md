@@ -8,6 +8,7 @@ zone_occupancy/
 ├── src/
 │   ├── main.py
 │   ├── utils/
+|   |   ├── utils.py
 │   │   ├── parser.py
 │   │   └── plotter.py
 │   ├── vehicles/
@@ -16,6 +17,7 @@ zone_occupancy/
 │       └── zone.py
 └── tests/
     ├── utils/
+    |   ├── test_utils.py
     │   └── test_parser.py
     ├── vehicles/
     │   └── test_vehicle.py

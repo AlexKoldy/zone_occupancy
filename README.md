@@ -48,7 +48,7 @@ This gives the code greater scalability and organizaiton. For example, if one wa
 ### Installation Steps
 1) Clone the repository:
     ```bash
-    git clone TODO
+    git clone https://github.com/AlexKoldy/zone_occupancy.git
     cd zone_occupancy
     ```
 2) Create and activate a virtual environment (replace ```python``` with ```python3``` depending on your installation):

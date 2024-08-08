@@ -1,0 +1,36 @@
+# Background
+
+Manned vehicles are tracked around our autonomous trucks using gps.
+Manned vehicles report their position and size to the mineserver, which passes their location information to autonomous trucks.
+The mineserver uses this data to determine occupancy of the autonomous operating zone (areas where autonomous vehicles are able to be engaged)
+and single truck zones (areas where only one autonomous vehicle may be present at a time, such as where the road narrows to a single lane).
+Autonomous trucks use this data to find if their stop buffers are intersecting with any other vehicles.
+
+# Problem Statement
+
+This problem covers zone occupancy.
+Zones are given in a geojson file called zone.geojson. In this file, each zone type is recorded in the zone feature properties. This file contains an autonomous operating zone and a single truck zone. Coordinates are given in meters, in ENU.
+There are several vehicles. Each vehicle's bounds are given here as an array of points. Feel free to hardcode them in your solution.
+Vehicle 1:
+[[1, 4], [3, 6], [5, 4], [3, 2]]
+Vehicle 2:
+[[-2, -2], [-6, -2], [-6, -4], [-2, -4]]
+Vehicle 3:
+[[-3, 9], [-3, 11], [-5, 11], [-5, 9]]
+
+For each vehicle, submit answers to the following:
+1. Is the vehicle contained in the autonomous operating zone?
+2. Is any part of the vehicle intersecting the single truck zone?
+3. Is any part of the vehicle intersecting the single truck zone that is already occupied by another vehicle?
+
+Finally, in the event of a comms loss, the vehicle bounds are buffered out in every direction from its last known position at a rate of 3 m/s.
+If vehicle 2 has been missing for 5 seconds, are any vehicle buffers intersecting?
+
+Include code for the following functions in whatever structure you please, along with any test code:
+0. Import and parse a geojson file.
+1. Take in a zone and vehicle. Return True if the vehicle is in the zone.
+2. Take in a zone and a vehicle. Return True if the vehicle is intersecting the zone.
+3. Take in a zone, a list of vehicles, and a target vehicle. Return True if the target vehicle is intersecting the zone and another vehicle is also intersecting the zone.
+4. Take in a list of vehicles (which includes their positions and gps data ages). Return True if any vehicle buffers intersect.
+
+Structure the code (zone and vehicle structures, etc) as you please. Feel free to import helpful packages and ask any questions that come to mind.

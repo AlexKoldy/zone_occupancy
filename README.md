@@ -5,6 +5,11 @@ This is my submission for the Pronto.ai coding take-home assessment. The interse
 zone_occupancy/
 ├── data/
 │   └── zone.json
+├── plots/
+│   ├── vehicle_1.png
+│   ├── vehicle_2.png
+│   ├── vehicle_3.png
+│   └── buffered_vehicle_2.png
 ├── src/
 │   ├── main.py
 │   ├── utils/
